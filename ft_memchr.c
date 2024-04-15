@@ -1,30 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: randrade <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/15 16:29:24 by randrade          #+#    #+#             */
-/*   Updated: 2024/04/15 17:17:12 by randrade         ###   ########.fr       */
+/*   Created: 2024/04/15 17:08:01 by randrade          #+#    #+#             */
+/*   Updated: 2024/04/15 17:52:19 by randrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	*ft_memmove(void *dest, const void *src, size_t len)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	int	i;
-
-	i = len - 1;
-	if (dest == NULL && src == NULL)
+	if (s == NULL)
 		return (NULL);
-	while (i >= 0)
+	while (n--)
 	{
-		((unsigned char *)dest)[i] = ((unsigned char *)src)[i];
-		i--;
+		if (*(unsigned char *)s == (unsigned char)c)
+			return ((char *)s);
+		s++;
 	}
-	return (dest);
+	return (NULL);
 }
 /*
 #include <stdio.h>
@@ -32,16 +30,12 @@ void	*ft_memmove(void *dest, const void *src, size_t len)
 
 int	main(void)
 {
-	char	str1[] = "Hello World!";
-	char	str2[] = "000000000";
+	char	*str = "Hello World!";
+	char	c = 'l';
 
-	printf("%s\n", str1);
-	char	*ptr1 = (char *)memmove(str2, str1, 5);
-	printf("%s\n", str2);
-	printf("%s\n\n", ptr1);
+	char	*ptr = (char *)memchr(str, c, 13);
+	printf("%s\n\n", ptr);
 
-	printf("%s\n", str1);
-	char	*ptr2 = (char *)ft_memmove(str2, str1, 5);
-	printf("%s\n", str2);
-	printf("%s\n", ptr2);
+	char	*ptr1 = (char *)ft_memchr(str, c, 13);
+	printf("%s\n", ptr1);
 }*/
