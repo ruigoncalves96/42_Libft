@@ -6,7 +6,7 @@
 /*   By: randrade <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/13 00:41:22 by randrade          #+#    #+#             */
-/*   Updated: 2024/04/15 10:23:15 by randrade         ###   ########.fr       */
+/*   Updated: 2024/04/16 14:29:31 by randrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,8 @@ int	main(void)
 */
 
 /*
-   If needle is an empty string, haystack is returned; if needle occurs nowhere in haystack,
-     NULL is returned; otherwise a pointer to the first character of the first occurrence of
-     needle is returned.
+   If needle is an empty string, haystack is returned;
+   if needle occurs nowhere in haystack, NULL is returned;
+   otherwise a pointer to the first character of the first occurrence of
+   needle is returned.
 */

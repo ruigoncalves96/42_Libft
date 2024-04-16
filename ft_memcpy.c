@@ -6,7 +6,7 @@
 /*   By: randrade <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 10:27:33 by randrade          #+#    #+#             */
-/*   Updated: 2024/04/15 17:04:58 by randrade         ###   ########.fr       */
+/*   Updated: 2024/04/16 14:48:27 by randrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 
 	i = 0;
 	if (dest == NULL && src == NULL)
-	       return (NULL);
+		return (NULL);
 	while (i < n)
 	{
 		((unsigned char *)dest)[i] = ((unsigned char *)src)[i];
@@ -46,6 +46,7 @@ int	main(void)
 }*/
 
 /*
-   The memcpy() function copies n bytes from memory area src to memory area dst.  If dst and
-     src overlap, behavior is undefined.  Applications in which dst and src might overlap should use memmove instead.
+   The memcpy() function copies n bytes from memory area src to memory area dst.
+   If dst and src overlap, behavior is undefined.
+   Applications in which dst and src might overlap should use memmove instead.
 */
