@@ -6,11 +6,11 @@
 /*   By: randrade <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 22:52:47 by randrade          #+#    #+#             */
-/*   Updated: 2024/04/12 22:56:18 by randrade         ###   ########.fr       */
+/*   Updated: 2024/04/17 15:18:29 by randrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
 int	ft_tolower(int c)
 {

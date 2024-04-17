@@ -6,11 +6,11 @@
 /*   By: randrade <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 22:59:58 by randrade          #+#    #+#             */
-/*   Updated: 2024/04/16 14:33:57 by randrade         ###   ########.fr       */
+/*   Updated: 2024/04/17 15:16:30 by randrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
 char	*ft_strchr(const char *s, int c)
 {

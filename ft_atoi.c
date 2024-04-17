@@ -6,11 +6,11 @@
 /*   By: randrade <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 18:23:26 by randrade          #+#    #+#             */
-/*   Updated: 2024/04/15 18:38:12 by randrade         ###   ########.fr       */
+/*   Updated: 2024/04/17 15:11:58 by randrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
 int	ft_atoi(const char *str)
 {

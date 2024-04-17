@@ -6,19 +6,17 @@
 /*   By: randrade <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/13 00:41:22 by randrade          #+#    #+#             */
-/*   Updated: 2024/04/16 14:29:31 by randrade         ###   ########.fr       */
+/*   Updated: 2024/04/17 17:01:10 by randrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
 	int	i;
 	int	j;
 
-	if (haystack == NULL || needle == NULL || len == 0)
-		return (NULL);
 	if (!*needle)
 		return ((char *)haystack);
 	i = 0;
@@ -42,9 +40,9 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 
 int	main(void)
 {
-	char	*haystack = "Hello my name is Rui";
-	char	*needle = "my";
-	int	len = 20;
+	char	*haystack = "";
+	char	*needle = "";
+	int	len = 0;
 
 	printf("function : %s\n", strnstr(haystack, needle, len)); 
 	printf("ft_function : %s\n", ft_strnstr(haystack, needle, len)); 

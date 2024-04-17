@@ -6,12 +6,11 @@
 /*   By: randrade <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 13:04:59 by randrade          #+#    #+#             */
-/*   Updated: 2024/04/16 14:00:39 by randrade         ###   ########.fr       */
+/*   Updated: 2024/04/17 15:12:46 by randrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stdlib.h>
+#include "libft.h"
 
 void	*ft_calloc(size_t count, size_t size)
 {

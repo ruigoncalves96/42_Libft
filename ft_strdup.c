@@ -6,12 +6,11 @@
 /*   By: randrade <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 14:01:21 by randrade          #+#    #+#             */
-/*   Updated: 2024/04/16 15:06:51 by randrade         ###   ########.fr       */
+/*   Updated: 2024/04/17 15:16:52 by randrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stdlib.h>
+#include "libft.h"
 
 char	*ft_strdup(const char *s1)
 {
