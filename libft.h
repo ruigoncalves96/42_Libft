@@ -6,7 +6,7 @@
 /*   By: randrade <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 15:34:25 by randrade          #+#    #+#             */
-/*   Updated: 2024/04/17 23:36:24 by randrade         ###   ########.fr       */
+/*   Updated: 2024/04/18 16:15:33 by randrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,5 +43,10 @@ char			*ft_strnstr(const char *haystack, const char *needle,
 					size_t len);
 size_t			ft_strlcpy(char *dst, const char *src, size_t size);
 size_t			ft_strlcat(char *dst, const char *src, size_t size);
+
+// Functions PART 2 
+//	v
+
+char    *ft_substr(char const *s, unsigned int start, size_t len);
 
 #endif
