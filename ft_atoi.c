@@ -6,7 +6,7 @@
 /*   By: randrade <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 18:23:26 by randrade          #+#    #+#             */
-/*   Updated: 2024/04/17 15:11:58 by randrade         ###   ########.fr       */
+/*   Updated: 2024/04/18 00:17:33 by randrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,8 @@ int	ft_atoi(const char *str)
 	value = 0;
 	i = 0;
 	pos_neg = 1;
-	while (str[i] == ' ')
+	while (str[i] == ' ' || str[i] == '\t' || str[i] == '\f'
+		|| str[i] == '\r' || str[i] == '\n' || str[i] == '\v')
 		i++;
 	if (str[i] == '+' || str[i] == '-')
 	{
@@ -42,8 +43,8 @@ int	ft_atoi(const char *str)
 
 int	main(void)
 {
-	char	*str = "  -12334"; 
+	char	*str = ""; 
 
-	printf("%d\n", atoi(str));
-	printf("%d\n", ft_atoi(str));
+	printf("%d\n", atoi("+42lyon"));
+	printf("%d\n", ft_atoi("+42lyon"));
 }*/
