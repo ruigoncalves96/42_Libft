@@ -18,5 +18,6 @@ clean:
 	rm $(OBJ) libft.a
 
 fclean:
+	rm $(OBJ)
 
 re:
