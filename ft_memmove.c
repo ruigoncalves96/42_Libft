@@ -6,7 +6,7 @@
 /*   By: randrade <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 16:29:24 by randrade          #+#    #+#             */
-/*   Updated: 2024/04/18 13:00:22 by randrade         ###   ########.fr       */
+/*   Updated: 2024/04/18 13:29:46 by randrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@ void	*ft_memmove(void *dest, const void *src, size_t len)
 	int	i;
 
 	i = len - 1;
-//	if (dest == NULL && src == NULL)
-//		return (NULL);
 	if (src < dest)
 	{
 		while (i >= 0)
