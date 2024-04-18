@@ -6,7 +6,7 @@
 /*   By: randrade <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 13:04:59 by randrade          #+#    #+#             */
-/*   Updated: 2024/04/17 15:13:10 by randrade         ###   ########.fr       */
+/*   Updated: 2024/04/18 14:40:49 by randrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,14 +21,27 @@ int	ft_isalnum(int c)
 }
 /*
 #include <stdio.h>
+#include <ctype.h>
 
 int     main(void)
 {
         int     c = '\0';
 
+	printf("----- ft_isalnum -----\n");
         while (c <= 127)
         {
                 if (ft_isalnum(c) != 0)
+                        printf("%c : is alpha\n", c);
+                else
+                        printf("%c : is not  alpha\n", c);
+                c++;
+        }
+	printf("\n");
+	c = '\0';
+	printf("----- isalnum -----\n");
+	while (c <= 127)
+        {
+		if (isalnum(c) != 0)
                         printf("%c : is alpha\n", c);
                 else
                         printf("%c : is not  alpha\n", c);

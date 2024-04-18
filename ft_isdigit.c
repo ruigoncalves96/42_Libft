@@ -6,7 +6,7 @@
 /*   By: randrade <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/08 15:24:34 by randrade          #+#    #+#             */
-/*   Updated: 2024/04/17 15:14:39 by randrade         ###   ########.fr       */
+/*   Updated: 2024/04/18 14:46:09 by randrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,14 +21,27 @@ int	ft_isdigit(int c)
 }
 /*
 #include <stdio.h>
+#include <ctype.h>
 
 int     main(void)
 {
         int     c = '\0';
 
+	printf("----- ft_isdigit -----\n");
         while (c <= 127)
         {
                 if (ft_isdigit(c) != 0)
+                        printf("%c : is digit\n", c);
+                else    
+                        printf("%c : is not digit\n", c);
+                c++;
+        }
+	printf("\n");
+	c = '\0';
+	printf("----- isdigit -----\n");
+        while (c <= 127)
+        {
+                if (isdigit(c) != 0)
                         printf("%c : is digit\n", c);
                 else    
                         printf("%c : is not digit\n", c);

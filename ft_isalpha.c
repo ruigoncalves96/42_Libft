@@ -6,7 +6,7 @@
 /*   By: randrade <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/08 14:01:45 by randrade          #+#    #+#             */
-/*   Updated: 2024/04/17 15:14:02 by randrade         ###   ########.fr       */
+/*   Updated: 2024/04/18 14:39:49 by randrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,14 +21,27 @@ int	ft_isalpha(int c)
 }
 /*
 #include <stdio.h>
+#include <ctype.h>
 
 int	main(void)
 {
 	int	c = '\0';
 
+	printf("----- ft_isalpha -----\n");
 	while (c <= 127)
 	{
 		if (ft_isalpha(c) != 0)
+			printf("%c : is alpha\n", c);
+		else	
+			printf("%c : is not  alpha\n", c);
+		c++;
+	}
+	printf("\n");
+	c = '\0';
+	printf("----- isalpha -----\n");
+	while (c <= 127)
+	{
+		if (isalpha(c) != 0)
 			printf("%c : is alpha\n", c);
 		else	
 			printf("%c : is not  alpha\n", c);
