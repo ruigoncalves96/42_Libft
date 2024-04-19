@@ -6,7 +6,7 @@
 /*   By: randrade <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 15:34:25 by randrade          #+#    #+#             */
-/*   Updated: 2024/04/18 16:15:33 by randrade         ###   ########.fr       */
+/*   Updated: 2024/04/19 12:38:42 by randrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,7 @@ size_t			ft_strlcat(char *dst, const char *src, size_t size);
 // Functions PART 2 
 //	v
 
-char    *ft_substr(char const *s, unsigned int start, size_t len);
+char			*ft_substr(char const *s, unsigned int start, size_t len);
+char			*ft_strjoin(char const *s1, char const *s2);
 
 #endif
