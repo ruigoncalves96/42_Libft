@@ -6,7 +6,7 @@
 /*   By: randrade <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/20 00:30:48 by randrade          #+#    #+#             */
-/*   Updated: 2024/04/22 14:36:02 by randrade         ###   ########.fr       */
+/*   Updated: 2024/04/22 16:37:08 by randrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,6 +62,8 @@ char	**ft_split(char const *s, char c)
 
 	count_words = ft_count_words(s, c);
 	ptr = (char **) ft_calloc((count_words + 1), sizeof(char *));
+	if (ptr == NULL)
+		return (NULL);
 	i = 0;
 	while (i < count_words)
 	{
@@ -69,6 +71,8 @@ char	**ft_split(char const *s, char c)
 			s++;
 		wrd_len = ft_wrdlen(s, c);
 		ptr[i] = (char *) ft_calloc(wrd_len + 1, sizeof(char));
+		if (ptr[i] == NULL)
+			return (NULL);
 		s = ft_wrdcpy(s, c, &ptr[i]);
 		i++;
 	}
