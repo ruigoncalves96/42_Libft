@@ -6,7 +6,7 @@
 /*   By: randrade <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/10 12:14:07 by randrade          #+#    #+#             */
-/*   Updated: 2024/04/17 15:12:22 by randrade         ###   ########.fr       */
+/*   Updated: 2024/04/24 15:13:41 by randrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,8 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	int	i;
+	size_t	i;
 
-	if (s == NULL)
-		return ;
 	i = 0;
 	while (i < n)
 	{

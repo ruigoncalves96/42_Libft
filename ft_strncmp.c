@@ -6,7 +6,7 @@
 /*   By: randrade <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/13 00:05:32 by randrade          #+#    #+#             */
-/*   Updated: 2024/04/18 00:33:52 by randrade         ###   ########.fr       */
+/*   Updated: 2024/04/24 15:10:51 by randrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	size_t	i;
 
-	if (s1 == NULL || s2 == NULL || !n)
+	if (n == 0)
 		return (0);
 	i = 0;
 	while (s1[i] && s2[i] && s1[i] == s2[i] && i < n - 1)

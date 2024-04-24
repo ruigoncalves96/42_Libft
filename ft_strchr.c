@@ -6,7 +6,7 @@
 /*   By: randrade <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 22:59:58 by randrade          #+#    #+#             */
-/*   Updated: 2024/04/17 15:16:30 by randrade         ###   ########.fr       */
+/*   Updated: 2024/04/24 15:13:17 by randrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,9 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	if (s == NULL)
-		return (NULL);
-	while (*s != (char) c && *s)
+	while (*s != (unsigned char)c && *s)
 		s++;
-	if (*s != (char)c)
+	if (*s != (unsigned char)c)
 		return (NULL);
 	return ((char *)s);
 }

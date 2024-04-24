@@ -6,7 +6,7 @@
 /*   By: randrade <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/20 00:30:48 by randrade          #+#    #+#             */
-/*   Updated: 2024/04/22 16:37:08 by randrade         ###   ########.fr       */
+/*   Updated: 2024/04/24 13:46:20 by randrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ static int	ft_count_words(char const *s, char c)
 	i = 0;
 	while (s[i])
 	{
-		if ((s[i + 1]) == c && s[i] != c || (s[i + 1]) == '\0' && s[i] != c)
+		if (((s[i + 1]) == c && s[i] != c) || ((s[i + 1]) == '\0' && s[i] != c))
 			count++;
 		i++;
 	}

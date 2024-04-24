@@ -6,7 +6,7 @@
 /*   By: randrade <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 23:32:13 by randrade          #+#    #+#             */
-/*   Updated: 2024/04/18 01:04:25 by randrade         ###   ########.fr       */
+/*   Updated: 2024/04/24 16:42:09 by randrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strrchr(const char *s, int c)
 	i = ft_strlen(s);
 	while (i >= 0)
 	{
-		if ((char)c == s[i])
+		if ((unsigned char)c == s[i])
 			return ((char *)&s[i]);
 		i--;
 	}
@@ -31,10 +31,11 @@ char	*ft_strrchr(const char *s, int c)
 
 int	main(void)
 {
-          const char      *s = "Hello world!";
-          int     c = 'l';
+          const char      *s = "Free the duck!";
+          int     c = 'e';
  
           printf("string : %s\n\n", s);
           printf("char : %c\n\n", c);
           printf("string : %s\n", ft_strrchr(s, c));
+          printf("string : %s\n", strrchr(s, c));
 }*/

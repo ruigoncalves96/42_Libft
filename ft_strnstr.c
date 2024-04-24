@@ -6,7 +6,7 @@
 /*   By: randrade <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/13 00:41:22 by randrade          #+#    #+#             */
-/*   Updated: 2024/04/17 17:01:10 by randrade         ###   ########.fr       */
+/*   Updated: 2024/04/24 13:47:14 by randrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-	int	i;
-	int	j;
+	unsigned int	i;
+	unsigned int	j;
 
 	if (!*needle)
 		return ((char *)haystack);

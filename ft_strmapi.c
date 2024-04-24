@@ -6,7 +6,7 @@
 /*   By: randrade <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 22:29:01 by randrade          #+#    #+#             */
-/*   Updated: 2024/04/24 12:40:08 by randrade         ###   ########.fr       */
+/*   Updated: 2024/04/24 15:51:54 by randrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	int		i;
 
 	str_len = ft_strlen(s);
-	ptr = calloc(str_len + 1, sizeof(char));
+	ptr = ft_calloc(str_len + 1, sizeof(char));
 	if (ptr == NULL)
 		return (ptr);
 	i = 0;

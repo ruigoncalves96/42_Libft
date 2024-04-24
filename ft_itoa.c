@@ -6,11 +6,12 @@
 /*   By: randrade <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/22 14:37:53 by randrade          #+#    #+#             */
-/*   Updated: 2024/04/24 11:59:01 by randrade         ###   ########.fr       */
+/*   Updated: 2024/04/24 15:48:45 by randrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 static char	*ft_intmin(char *ptr)
 {
@@ -72,7 +73,7 @@ char	*ft_itoa(int n)
 	digit_len = ft_digitlen(n);
 	if (n < 0)
 		digit_len++;
-	ptr = calloc((digit_len + 1), sizeof(char));
+	ptr = ft_calloc((digit_len + 1), sizeof(char));
 	if (ptr != NULL)
 	{
 		ft_convert(ptr, n);
@@ -85,10 +86,11 @@ char	*ft_itoa(int n)
 
 int	main(void)
 {
-	int	i = -2147483648;;
+	int	i = -5859;;
 	char	*nbr = ft_itoa(i);
 
 	printf("%s\n", nbr);
+	printf("%d\n", nbr[5]);
 
 	free(nbr);
 }

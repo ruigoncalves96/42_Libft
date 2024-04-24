@@ -6,7 +6,7 @@
 /*   By: randrade <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 14:12:40 by randrade          #+#    #+#             */
-/*   Updated: 2024/04/17 15:16:17 by randrade         ###   ########.fr       */
+/*   Updated: 2024/04/24 13:43:33 by randrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_memset(void *s, int c, size_t n)
 {
-	int	i;
+	unsigned int	i;
 
 	i = 0;
 	while (i < n)
