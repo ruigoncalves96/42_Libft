@@ -6,13 +6,13 @@
 /*   By: randrade <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/22 14:37:53 by randrade          #+#    #+#             */
-/*   Updated: 2024/04/23 22:26:38 by randrade         ###   ########.fr       */
+/*   Updated: 2024/04/24 11:59:01 by randrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static char	*ft_intmin(char *ptr, int n)
+static char	*ft_intmin(char *ptr)
 {
 	ptr[1] = '2';
 	ptr[2] = '1';
@@ -33,7 +33,7 @@ static char	*ft_convert(char *ptr, int n)
 	{
 		*ptr = '-';
 		if (n == -2147483648)
-			return (ft_intmin(ptr, n));
+			return (ft_intmin(ptr));
 		n *= -1;
 		ptr++;
 	}
