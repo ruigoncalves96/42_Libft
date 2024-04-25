@@ -6,7 +6,7 @@
 /*   By: randrade <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 19:21:44 by randrade          #+#    #+#             */
-/*   Updated: 2024/04/25 16:42:21 by randrade         ###   ########.fr       */
+/*   Updated: 2024/04/25 17:13:42 by randrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,6 @@ int	main(void)
 	printf("%s\n", (char *)vector[0]->content);
 	printf("%s\n", (char *)vector[1]->content);
 	printf("%s\n", (char *)vector[2]->content);
-
 }
 */
 /*

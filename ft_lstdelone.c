@@ -1,27 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstlast.c                                       :+:      :+:    :+:   */
+/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: randrade <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/25 16:45:09 by randrade          #+#    #+#             */
-/*   Updated: 2024/04/25 19:27:58 by randrade         ###   ########.fr       */
+/*   Created: 2024/04/25 19:31:52 by randrade          #+#    #+#             */
+/*   Updated: 2024/04/25 20:11:21 by randrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstlast(t_list *lst)
+void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-	if (lst == NULL)
-		return (NULL);
-	while (lst->next != NULL)
-		lst = lst->next;
-	return (lst);
+	if (lst == NULL || del == NULL)
+		return ;
+	del(lst->content);
+	free(lst);
+	lst = NULL;
 }
 /*
 #include <stdio.h>
+
+void	ft_del_content(void *content)
+{
+	free(content);
+}
 
 int	main(void)
 {
@@ -33,33 +38,33 @@ int	main(void)
 	vector[0]->next = vector[1];
 	vector[1]->next = vector[2];
 	
+	printf("Before Function:\n");
 	printf("%s\n", (char *)vector[0]->content);
 	printf("%s\n", (char *)vector[1]->content);
 	printf("%s\n", (char *)vector[2]->content);
 	
-	printf("\n%s\n", (char *)(ft_lstlast(vector[0]))->content);
-
-	printf("\n%s\n", (char *)vector[0]->content);
-	printf("%s\n", (char *)vector[1]->content);
-	printf("%s\n", (char *)vector[2]->content);
+	ft_lstdelone(vector[1], (ft_del_content));
 }
 */
 /*
 
 ----- Parameters -----
 
-	lst: The beginning of the list.
+	lst: The node to free.
+	del: The address of the function used to delete the content.
 
 ----- Return Value -----
 
-	Last node of the list.
-
------ External functs -----
-
 	None.
+
+----- External Functs -----
+
+	Free.
 
 ----- Description -----
 
-	Returns the last node of the list.
+	Takes as a parameter a node and frees the memory of the node’s
+content using the function ’del’ given as a parameter and free the node.
+	The memory of ’next’ must not be freed.
 
 */

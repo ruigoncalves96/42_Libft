@@ -1,24 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstlast.c                                       :+:      :+:    :+:   */
+/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: randrade <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/25 16:45:09 by randrade          #+#    #+#             */
-/*   Updated: 2024/04/25 19:27:58 by randrade         ###   ########.fr       */
+/*   Created: 2024/04/25 17:08:58 by randrade          #+#    #+#             */
+/*   Updated: 2024/04/25 19:21:51 by randrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstlast(t_list *lst)
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	if (lst == NULL)
-		return (NULL);
-	while (lst->next != NULL)
-		lst = lst->next;
-	return (lst);
+	t_list	*last;
+
+	if (*lst)
+	{
+		last = ft_lstlast(*lst);
+		last->next = new;
+	}
+	else
+		*lst = new;
 }
 /*
 #include <stdio.h>
@@ -29,37 +33,41 @@ int	main(void)
 	vector[0] = ft_lstnew("Free");
 	vector[1] = ft_lstnew("the");
 	vector[2] = ft_lstnew("duck!");
-	
+
 	vector[0]->next = vector[1];
 	vector[1]->next = vector[2];
 	
+	printf("Before Function:\n");
 	printf("%s\n", (char *)vector[0]->content);
 	printf("%s\n", (char *)vector[1]->content);
 	printf("%s\n", (char *)vector[2]->content);
 	
-	printf("\n%s\n", (char *)(ft_lstlast(vector[0]))->content);
-
-	printf("\n%s\n", (char *)vector[0]->content);
+	ft_lstadd_back(vector, vector[0]);
+	
+	printf("\nAfter Function:\n");
+	printf("%s\n", (char *)vector[0]->content);
 	printf("%s\n", (char *)vector[1]->content);
 	printf("%s\n", (char *)vector[2]->content);
+	printf("%s\n", (char *)vector[2]->next->content);
 }
 */
 /*
 
 ----- Parameters -----
 
-	lst: The beginning of the list.
+	lst: The address of a pointer to the first link of a list.
+	new: The address of a pointer to the node to be added to the list.
 
 ----- Return Value -----
 
-	Last node of the list.
+	None.
 
------ External functs -----
+----- External functs. -----
 
 	None.
 
 ----- Description -----
 
-	Returns the last node of the list.
+	Adds the node ’new’ at the end of the list.
 
 */
