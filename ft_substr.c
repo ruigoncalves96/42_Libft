@@ -6,7 +6,7 @@
 /*   By: randrade <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 15:58:46 by randrade          #+#    #+#             */
-/*   Updated: 2024/04/19 12:35:05 by randrade         ###   ########.fr       */
+/*   Updated: 2024/04/26 15:09:35 by randrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,9 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	char			*ptr;
 
 	s_len = ft_strlen(s);
-	if (start >= s_len)
+	if (start >= s_len || !len)
 		return (ft_strdup(""));
-	if (len > s_len)
+	if (start + len > s_len)
 		len = s_len - start;
 	ptr = malloc(len + 1);
 	if (ptr == NULL)
@@ -34,7 +34,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 int	main(void)
 {
 	char	str[] = "Free the duck!";
-	char	*str2 = ft_substr(str, 0, 42000);
+	char	*str2 = ft_substr("hola", 0, 0);
 
 	printf("%s\n", str);
 	printf("%s\n", str2);

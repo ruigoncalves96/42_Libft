@@ -6,7 +6,7 @@
 /*   By: randrade <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 15:33:48 by randrade          #+#    #+#             */
-/*   Updated: 2024/04/19 20:09:49 by randrade         ###   ########.fr       */
+/*   Updated: 2024/04/26 14:48:10 by randrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,6 +58,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	int		f_trim;
 	int		l_trim;
 
+	if (!*s1)
+		return (ft_strdup(""));
 	s1_len = ft_strlen(s1);
 	f_trim = ft_first_trim(s1, set);
 	l_trim = ft_last_trim(s1, set, s1_len);
