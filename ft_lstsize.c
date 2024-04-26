@@ -6,7 +6,7 @@
 /*   By: randrade <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/25 00:49:36 by randrade          #+#    #+#             */
-/*   Updated: 2024/04/25 16:43:07 by randrade         ###   ########.fr       */
+/*   Updated: 2024/04/26 00:28:42 by randrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,13 +16,11 @@ int	ft_lstsize(t_list *lst)
 {
 	int	i;
 
-	if (lst == NULL)
-		return (0);
-	i = 1;
-	while (lst->next != NULL)
+	i = 0;
+	while (lst != NULL)
 	{
 		lst = lst->next;
-		i++;
+		++i;
 	}
 	return (i);
 }

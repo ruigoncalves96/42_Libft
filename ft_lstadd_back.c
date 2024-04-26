@@ -6,7 +6,7 @@
 /*   By: randrade <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/25 17:08:58 by randrade          #+#    #+#             */
-/*   Updated: 2024/04/25 19:21:51 by randrade         ###   ########.fr       */
+/*   Updated: 2024/04/26 00:34:04 by randrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 {
 	t_list	*last;
 
+	if (lst == NULL)
+		return ;
 	if (*lst)
 	{
 		last = ft_lstlast(*lst);
