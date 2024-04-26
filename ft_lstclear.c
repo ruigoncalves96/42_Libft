@@ -6,7 +6,7 @@
 /*   By: randrade <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/25 20:11:49 by randrade          #+#    #+#             */
-/*   Updated: 2024/04/26 00:50:41 by randrade         ###   ########.fr       */
+/*   Updated: 2024/04/26 22:26:57 by randrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,14 +17,15 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 	t_list	*i;
 	t_list	*temp;
 
-	if (!lst || !del)
+	if (!lst)
 		return ;
 	i = *lst;
 	while (i)
 	{
 		temp = i;
 		i = i->next;
-		del(temp->content);
+		if (del)
+			del(temp->content);
 		free(temp);
 	}
 	*lst = NULL;
@@ -34,6 +35,42 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 
 int	main(void)
 {
+	t_list  *head;
+	t_list  *new_node;
+	t_list  *current;
+	
+	new_node = ft_lstnew("Free");
+	head = new_node;
+	current = new_node;
+	new_node = ft_lstnew("the");
+	current->next = new_node;
+	current = new_node;
+	new_node = ft_lstnew("Duck!");
+	current->next = new_node;
+	
+	printf("Head List address: %p\n", head);
+	printf("\nList 1 address: %p\n", head);
+	printf("List 1 content: %s\n", (char *)head->content);
+	printf("List 1 next: %p\n", head->next);
+	printf("\nList 2 address: %p\n", head->next);
+	printf("List 2 content: %s\n", (char *)head->next->content);
+	printf("List 2 next: %p\n", head->next->next);
+	printf("\nList 3 address: %p\n", head->next->next);
+	printf("List 3 content: %s\n", (char *)head->next->next->content);
+	printf("List 3 next: %p\n", head->next->next->next);
+	
+	ft_lstclear(&head, NULL);
+	
+	printf("\nHead List address: %p\n", head);
+	printf("\nList 1 address: %p\n", head);
+	printf("List 1 content: %s\n", (char *)head->content);
+	printf("List 1 next: %p\n", head->next);
+	printf("\nList 2 address: %p\n", head->next);
+	printf("List 2 content: %s\n", (char *)head->next->content);
+	printf("List 2 next: %p\n", head->next->next);
+	printf("\nList 3 address: %p\n", head->next->next);
+	printf("List 3 content: %s\n", (char *)head->next->next->content);
+	printf("List 3 next: %p\n", head->next->next->next);
 }
 */
 /*

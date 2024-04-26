@@ -6,7 +6,7 @@
 /*   By: randrade <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/25 00:49:36 by randrade          #+#    #+#             */
-/*   Updated: 2024/04/26 00:28:42 by randrade         ###   ########.fr       */
+/*   Updated: 2024/04/26 22:04:35 by randrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,19 +29,39 @@ int	ft_lstsize(t_list *lst)
 
 int	main(void)
 {
-	t_list  **vector = (t_list **) ft_calloc(3, sizeof(t_list *));
-	vector[0] = ft_lstnew("Free");
-	vector[1] = ft_lstnew("the");
-	vector[2] = ft_lstnew("duck!");
+	t_list  *head;
+	t_list  *new_node;
+	t_list  *current;
 	
-	vector[0]->next = vector[1];
-	vector[1]->next = vector[2];
-	
-	printf("%s\n", (char *)vector[0]->content);
-	printf("%s\n", (char *)vector[1]->content);
-	printf("%s\n", (char *)vector[2]->content);
+	new_node = ft_lstnew("Free");
+	head = new_node;
+	current = new_node;
+	new_node = ft_lstnew("the");
+	current->next = new_node;
+	current = new_node;
+	new_node = ft_lstnew("Duck!");
+	current->next = new_node;
 
-	printf("\n%d\n", ft_lstsize(vector[0]));
+	int	size = ft_lstsize(head);
+	
+	printf("Head List address: %p\n", head);
+	printf("\nList 1 address: %p\n", head);
+	printf("List 1 content: %s\n", (char *)head->content);
+	printf("List 1 next: %p\n", head->next);
+	printf("\nList 2 address: %p\n", head->next);
+	printf("List 2 content: %s\n", (char *)head->next->content);
+	printf("List 2 next: %p\n", head->next->next);
+	printf("\nList 3 address: %p\n", head->next->next);
+	printf("List 3 content: %s\n", (char *)head->next->next->content);
+	printf("List 3 next: %p\n", head->next->next->next);
+
+	printf("\nSize of List: %d\n", size);
+	
+	free(head->next->next);
+	free(head->next);
+	free(head);
+	
+	head = NULL;
 }
 */
 /*

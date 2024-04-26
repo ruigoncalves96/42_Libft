@@ -6,7 +6,7 @@
 /*   By: randrade <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 17:24:53 by randrade          #+#    #+#             */
-/*   Updated: 2024/04/24 20:35:51 by randrade         ###   ########.fr       */
+/*   Updated: 2024/04/26 20:41:44 by randrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,30 +28,36 @@ t_list	*ft_lstnew(void *content)
 
 int	main(void)
 {
-	char	*str = "Free the duck!";
-	char	*str2 = "NOW!";
-	t_list	*duck = ft_lstnew(str);
-	t_list	*ducky = ft_lstnew(str2);
-	duck->next = ducky;
+	t_list	*head;
+	t_list	*new_node;
+	t_list	*current;
 
-	printf("str pointer = %p\n", str);
-	printf("str2 pointer = %p\n\n", str2);
+	new_node = ft_lstnew("Free");
+	head = new_node;
+	current = new_node;
+	new_node = ft_lstnew("the");
+	current->next = new_node;
+	current = new_node;
+	new_node = ft_lstnew("Duck!");
+	current->next = new_node;
 
-	printf("LIST 1\n\n");
-	printf("pointer list 1 = %p\n", duck);
-	printf("content = %s --> pointer = %p\n", (char *)duck->content,
-							(char *)duck->content);
-	printf("pointer next = %p\n", duck->next);
-	printf("\nLIST 2\n\n");
-	printf("pointer list 2 = %p\n", ducky);
-	printf("content = %s --> pointer = %p\n", (char *)ducky->content,
-							(char *)ducky->content);
-	printf("pointer next = %p\n", ducky->next);
+	printf("Head List address: %p\n", head);
+	printf("\nList 1 address: %p\n", head);
+	printf("List 1 content: %s\n", (char *)head->content);
+	printf("List 1 next: %p\n", head->next);
+	printf("\nList 2 address: %p\n", head->next);
+	printf("List 2 content: %s\n", (char *)head->next->content);
+	printf("List 2 next: %p\n", head->next->next);
+	printf("\nList 3 address: %p\n", head->next->next);
+	printf("List 3 content: %s\n", (char *)head->next->next->content);
+	printf("List 3 next: %p\n", head->next->next->next);
 
-	free(duck);
-	free(ducky);
-}
-*/
+	free(head->next->next);
+	free(head->next);
+	free(head);
+
+	head = NULL;
+}*/
 /*
 
 ----- Parameters -----
