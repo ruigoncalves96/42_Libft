@@ -6,36 +6,12 @@
 /*   By: randrade <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 16:29:24 by randrade          #+#    #+#             */
-/*   Updated: 2024/04/29 14:14:14 by randrade         ###   ########.fr       */
+/*   Updated: 2024/05/01 14:24:11 by randrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-/*
-void	*ft_memmove(void *str1, const void *str2, size_t n)
-{
-	size_t	i;
-	char	*temp_str1;
-	char	*temp_str2;
 
-	temp_str1 = (char *)str1;
-	temp_str2 = (char *)str2;
-	i = -1;
-	if (str1 == NULL && str2 == NULL)
-		return (0);
-	if (str1 > str2)
-	{
-		while (n-- > 0)
-			temp_str1[n] = temp_str2[n];
-	}
-	else
-	{
-		while (++i < n)
-			temp_str1[i] = temp_str2[i];
-	}
-	return (str1);
-}
-*/
 void	*ft_memmove(void *dest, const void *src, size_t len)
 {
 	int	i;
